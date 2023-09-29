@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Layout - The z-index Property
+    </title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>The z-index Property</h1>
+    <h2>The z-index Property</h2>
+    <p>The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;img src="img_tree.png"&gt;
+&lt;p&gt;Because the image has a z-index of -1, it will be placed behind the text.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="z-index_output.html">Out_Put</a></h3>
+<hr><br>
+    <h5>Example-2</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2; /* green box will be above black box */
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Z-index Example&lt;/h1&gt;
+
+&lt;p&gt;An element with greater stack order is always above an element with a lower stack order.&lt;/p&gt;
+
+&lt;div class="container"&gt;
+  &lt;div class="black-box"&gt;Black box (z-index: 1)&lt;/div&gt;
+  &lt;div class="gray-box"&gt;Gray box (z-index: 3)&lt;/div&gt;
+  &lt;div class="green-box"&gt;Green box (z-index: 2)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="z-index_e2_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Without z-index</h2>
+    <p>If two positioned elements overlap each other without a z-index specified, the element defined last in the HTML code will be shown on top.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Overlapping elements&lt;/h1&gt;
+
+&lt;p&gt;If two positioned elements overlap each other without a z-index specified,
+the element defined last in the HTML code will be shown on top:&lt;/p&gt;
+
+&lt;div class="container"&gt;
+  &lt;div class="black-box"&gt;Black box&lt;/div&gt;
+  &lt;div class="gray-box"&gt;Gray box&lt;/div&gt;
+  &lt;div class="green-box"&gt;Green box&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="without-z_output.html">Out_Put</a></h3>
+</body>
+</html>

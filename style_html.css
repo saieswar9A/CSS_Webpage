@@ -1,0 +1,47 @@
+body
+{
+    background: rgba(28, 216, 237, 0.384);
+}
+h1
+{
+    text-align: center;
+    color: blueviolet;
+    text-decoration-line: underline;
+}
+h2{
+    margin-left: 3%;
+    color:brown;
+    text-decoration-line: underline;
+}
+h3{
+    margin-left: 3%;
+    font-size: large;
+}
+h4{
+    text-align: center;
+    font-size: larger;
+}
+p{
+    font-size: larger;
+    margin-left: 3%;
+}
+ul{
+    margin-left: 5%;
+    font-size: large;
+}
+code{
+    font-size: large;
+    color: rgba(17, 60, 232, 0.83);
+    font-weight: bold;
+}
+pre{
+    margin-left: 35%;
+}
+a{
+    text-decoration: none;
+    color: rgb(202, 21, 211);
+    font-size: larger;
+}
+hr{
+    border:  5px solid rgb(235, 255, 235);
+}

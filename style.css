@@ -1,0 +1,14 @@
+body
+{
+   background-color: rgb(182, 237, 243);
+}
+#intro h1
+{
+    text-align: center;
+}
+a{
+    text-decoration-line: none;
+}
+td{
+    padding: 10px;
+}

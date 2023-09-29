@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Layout - Overflow</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Layout - Overflow</h1>
+    <h2>
+        CSS Overflow
+    </h2>
+    <p>
+        The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+    </p>
+    <p>The overflow property has the following values:</p>
+    <ul>
+        <li>visible - Default. The overflow is not clipped. The content renders outside the element's box</li>
+        <li>hidden - The overflow is clipped, and the rest of the content will be invisible</li>
+        <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+        <li>auto - Similar to scroll, but it adds scrollbars only when necessary</li>
+      </ul>
+      <h2>overflow: visible</h2>
+      <p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+
+        </pre>
+      </code>
+      <h3><a href="visible_output.html">Out_Put</a></h3>
+<hr><br>
+      <h2>overflow: hidden</h2>
+      <p>With the hidden value, the overflow is clipped, and the rest of the content is hidden:</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Overflow: hidden&lt;/h2&gt;
+
+&lt;p&gt;With the hidden value, the overflow is clipped, and the rest of the content is hidden:&lt;/p&gt;
+&lt;p&gt;Try to remove the overflow property to understand how it works.&lt;/p&gt;
+
+&lt;div&gt;You can use the overflow property when you want to have better control of the layout.
+ The overflow property specifies what happens if content overflows an element's box.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="hidden_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>overflow: scroll</h2>
+      <p>Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Overflow: hidden&lt;/h2&gt;
+
+&lt;p&gt;With the hidden value, the overflow is clipped, and the rest of the content is hidden:&lt;/p&gt;
+&lt;p&gt;Try to remove the overflow property to understand how it works.&lt;/p&gt;
+
+&lt;div&gt;You can use the overflow property when you want to have better control of the layout.
+ The overflow property specifies what happens if content overflows an element's box.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="scroll_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>overflow: auto</h2>
+      <p>The auto value is similar to scroll, but it adds scrollbars only when necessary:</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow: auto;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Overflow: auto&lt;/h2&gt;
+
+&lt;p&gt;The auto value is similar to scroll, only it adds scrollbars when necessary:&lt;/p&gt;
+
+&lt;div&gt;You can use the overflow property when you want to have better control of the layout.
+ The overflow property specifies what happens if content overflows an element's box.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="auto_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>overflow-x and overflow-y</h2>
+      <p>The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):</p>
+      <p>overflow-x specifies what to do with the left/right edges of the content.<br>
+        overflow-y specifies what to do with the top/bottom edges of the content.</p>
+        <h5>Example</h5>
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Overflow-x and overflow-y&lt;/h2&gt;
+
+&lt;p&gt;You can also change the overflow of content horizontally or vertically.&lt;/p&gt;
+&lt;p&gt;overflow-x specifies what to do with the left/right edges of the content.&lt;/p&gt;
+&lt;p&gt;overflow-y specifies what to do with the top/bottom edges of the content.&lt;/p&gt;
+
+&lt;div&gt;You can use the overflow property when you want to have better control of the layout. 
+The overflow property specifies what happens if content overflows an element's box.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+        </code>
+        <h3><a href="overflow-x,y_output.html">Out_Put</a></h3>
+
+</body>
+</html>

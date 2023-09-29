@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="style_html.css">
+</head>
+<body>
+    <h1>Selectors</h1>
+    <p>
+        Selectors point to the HTML element which we want to style. We use selectors in internal
+and external stylesheets. There are mainly 3 types of selectors that are used to apply styles:
+    </p>
+    <ul>
+        <b>
+          <li> Element selector</li>
+          <li> Class selector</li>
+          <li> Id selector</li>
+        </b>
+    </ul>
+    <p>
+        Specificity here defines which style will be applied when same multiple styles are applied to
+an element. If the specificity is same, then the latest rule is applied.<br> Specificity order:
+<b> inline > id selector > class selector > tag selector > browser default.</b>
+    </p>
+   
+<hr><br>
+    <h2>Element Selector</h2>
+    <p>
+        The element selector selects all elements with the specified element name. This will select all the elements in the HTML document. 
+    </p>
+    <h3>
+        Syntax
+    </h3>
+    <code><span style="margin-left: 10%;">
+        element {css declarations;}</span>
+    </code>
+    <h3>Example</h3>
+    
+    <code>
+        <pre>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+p {
+  text-align: center;
+  color: red;
+} 
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+&ltp>Every paragraph will be affected by the style.&lt/p&gt
+&ltp id="para1">Me too!&lt/p&gt
+&ltp>And me!&lt/p&gt
+&lt/body&gt
+&lt/html&gt
+        </pre>
+    </code>
+    <h4><a href="element_selector-output.html"> Out_Put</a></h4>
+
+    <hr><br>
+
+    <h2>Class Selector</h2>
+    <p>
+        The class selector selects multiple elements with a specific class attribute. To select
+elements with a specific class, write a period(.) character, followed by the name of
+the class
+    </p>
+    <h3>Syntax</h3>
+    <code><span style="margin-left: 10%;">
+        .class-name {css declarations; }</span>
+    </code>
+  <h3>Example</h3>
+
+  <code>
+    <pre>
+ &lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+.center {
+  text-align: center;
+  color: red;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth1 class="center">Red and center-aligned heading&lt/h1&gt
+&ltp class="center">Red and center-aligned paragraph.&lt/p&gt 
+
+&lt/body&gt
+&lt/html&gt
+    </pre>
+  </code>
+  <h4><a href="class_output.html">Out_Put</a></h4>
+
+  <hr><br>
+
+  <h2>ID Selector</h2>
+  <p>The id selector selects only one element with a specific id attribute. To select
+    element with a specific id, write a hash(#) character, followed by the name of the id</p>
+    <h3>Syntax</h3>
+    <code><span style="margin-left: 10%;">
+        #class-name {css declarations;}</span>
+    </code>
+    <p>
+        To use the id selector, the id attribute is used in the element's opening tag. The
+value of the id attribute contains the name of the id. There can only be one id in the
+tag. The id is unique in a HTML page. If another element is given the same id, the
+styles would not be applied by the browse
+    </p>
+    <code>
+        <pre>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+#para1 {
+  text-align: center;
+  color: red;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp id="para1">Hello World!&lt/p&gt
+&ltp&gtThis paragraph is not affected by the style.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+        </pre>
+    </code>
+<h4><a href="id_output.html">Out_Put</a></h4>
+
+<hr><br>
+
+<h2>Grouping Selectors</h2>
+<p>It is most of the time that we use same css for multiple elements and we can't use
+    too much classes. This would bring classes without any meaning in the scenario and
+    would become difficult to manage.</p>
+
+<p>
+    So, CSS provides with a grouping feature where you can apply CSS rules to multiple
+elements with the use of combination of either tag, class or id. For grouping, we use
+comma between the different Selector.
+</p>
+<h3>Syntax</h3>
+    <ul>
+        <li><code>p, .class-name { CSS properties }</code> - apply styles to 'para' and element
+            with class as 'class-name'</li>
+        <li><code>#id1, #id2, span { CSS properties }</code> - apply styles to 'span' and
+            elements with ids as 'id1' and 'id2'</li>
+        <li><code>.class-name, #id1, div { CSS properties }</code> - apply styles to 'div' and
+            elements with class 'class-name' and id as 'id1'</li>
+    </ul>
+    <h3>Example</h3>
+    <code>
+        <pre>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+h1, h2, p {
+    text-align: center;
+    color: red;
+  }
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp id="para1">Hello World!&lt/p&gt
+&ltp&gtThis paragraph is not affected by the style.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+        </pre>
+    </code>
+<h4><a href="grouping_output.html">Out_Put</a></h4>
+
+<hr><br>
+
+<h2>The CSS Universal Selector</h2>
+<p>
+    The universal selector (*) selects all HTML elements on the page.
+</p>
+<h3>Example</h3>
+<pre>
+    <code>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+* {
+    text-align: center;
+    color: blue;
+  }
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp id="para1">Hello World!&lt/p&gt
+&ltp&gtThis paragraph is not affected by the style.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+    </code>
+</pre>
+<h4><a href="universal_output.html">Out_Put</a></h4>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Layout - display: inline-block</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+    
+</head>
+<body>
+    <h1>The display: inline-block Value</h1>
+    <h2>The display: inline-block Value</h2>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+
+.img2 {
+  float: right;
+}
+
+.clearfix::after {
+  content: &quot;&quot;;
+  clear: both;
+  display: table;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Without Clearfix&lt;/h2&gt;
+
+&lt;p&gt;This image is floated to the right. It is also taller than the element containing it, so it 
+overflows outside of its container:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;img class=&quot;img1&quot; src=&quot;pineapple.jpg&quot; alt=&quot;Pineapple&quot; 
+  width=&quot;170&quot; height=&quot;170&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+&lt;/div&gt;
+
+&lt;h2 style=&quot;clear:right&quot;&gt;With New Modern Clearfix&lt;/h2&gt;
+&lt;p&gt;Add the clearfix hack to the containing element, to fix this problem:&lt;/p&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;img class=&quot;img2&quot; src=&quot;pineapple.jpg&quot; alt=&quot;Pineapple&quot; width=&quot;170&quot; 
+  height=&quot;170&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="inline-block_output.html">Out-Put</a></h3>
+<hr><br>
+    <h2>Using inline-block to Create Navigation Links</h2>
+    <p>One common use for display: inline-block is to display list items horizontally instead of vertically. 
+      The following example creates horizontal navigation links:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.nav {
+  background-color: yellow; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Horizontal Navigation Links&lt;/h1&gt;
+&lt;p&gt;By default, list items are displayed vertically. In this example we use display: inline-block 
+to display them horizontally (side by side).&lt;/p&gt;
+&lt;p&gt;Note: If you resize the browser window, the links will automatically break when it becomes too crowded.&lt;/p&gt;
+
+&lt;ul class="nav"&gt;
+  &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#about"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#clients"&gt;Our Clients&lt;/a&gt;&lt;/li&gt;  
+  &lt;li&gt;&lt;a href="#contact"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="inline-block_e2_output.html">Out-Put</a></h3>
+
+</body>
+</html>

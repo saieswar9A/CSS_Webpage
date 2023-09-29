@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Layout - The position Property</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <p>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
+    <h2>The position Property</h2>
+    <p>The position property specifies the type of positioning method used for an element.</p>
+    <p>There are five different position values:</p>
+    <ul>
+        <li>static</li>
+        <li>relative</li>
+        <li>fixed</li>
+        <li>absolute</li>
+        <li>sticky</li>
+      </ul>
+      <h2>position: static;</h2>
+      <p>An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;position: static;&lt;/h2&gt;
+
+&lt;p&gt;An element with position: static; is not positioned in any special way; it is always positioned 
+according to the normal flow of the page:&lt;/p&gt;
+
+&lt;div class="static"&gt;
+This div element has position: static;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="static_output.html">Out_Put</a></h3>
+<hr><br>
+      <h2>position: relative;</h2>
+      <p>An element with position: relative; is positioned relative to its normal position.</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;position: relative;&lt;/h2&gt;
+
+&lt;p&gt;An element with position: relative; is positioned relative to its normal position:&lt;/p&gt;
+
+&lt;div class="relative"&gt;
+This div element has position: relative;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+        </pre>
+      </code>
+
+      <h3><a href="relative_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>position: fixed;</h2>
+      <P>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+        <br>
+        A fixed element does not leave a gap in the page where it would normally have been located.
+      </P>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;position: fixed;&lt;/h2&gt;
+
+&lt;p&gt;An element with position: fixed; is positioned relative to the viewport, which means 
+it always stays in the same place even if the page is scrolled:&lt;/p&gt;
+
+&lt;div class="fixed"&gt;
+This div element has position: fixed;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+        </pre>
+      </code>
+
+      <h3><a href="fixed_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>position: absolute;</h2>
+      <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+} 
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;position: absolute;&lt;/h2&gt;
+
+&lt;p&gt;An element with position: absolute; is positioned relative to the nearest positioned
+ ancestor (instead of positioned relative to the viewport, like fixed):&lt;/p&gt;
+
+&lt;div class="relative"&gt;This div element has position: relative;
+  &lt;div class="absolute"&gt;This div element has position: absolute;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+
+      <h3><a href="absolute_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>position: sticky;</h2>
+      <p>An element with position: sticky; is positioned based on the user's scroll position.</p>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Try to &lt;b&gt;scroll&lt;/b&gt; inside this frame to understand how sticky positioning works.&lt;/p&gt;
+
+&lt;div class="sticky"&gt;I am sticky!&lt;/div&gt;
+
+&lt;div style="padding-bottom:2000px"&gt;
+  &lt;p&gt;In this example, the sticky element sticks to the top of the page (top: 0), when you reach 
+  its scroll position.&lt;/p&gt;&lt;p&gt;Scroll back up to remove the stickyness.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
+  concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+  Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+  &lt;p&gt;Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
+  concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+  Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="stickyy_output.html">Out_Put</a></h3>
+
+
+</body>
+</html>
