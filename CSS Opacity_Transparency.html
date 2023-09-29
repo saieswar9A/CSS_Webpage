@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Opacity / Transparency</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Opacity / Transparency</h1>
+    <h2>CSS Opacity / Transparency</h2>
+    <p>The opacity property specifies the opacity/transparency of an element.</p>
+    <P>Transparent Image</P>
+    <p>The opacity property can take a value from 0.0 - 1.0. The lower the value, the more transparent:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  opacity: 0.5;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Image Transparency&lt;/h1&gt;
+&lt;p&gt;The opacity property specifies the transparency of an element. The lower 
+the value, the more transparent:&lt;/p&gt;
+
+&lt;p&gt;Image with 50% opacity:&lt;/p&gt;
+&lt;img src=&quot;img_forest.jpg&quot; alt=&quot;Forest&quot; width=&quot;170&quot; height=&quot;100&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    
+    <h3><a href="Opacity_Transparency_output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>Transparent Hover Effect</h2>
+    <p>The opacity property is often used together with the :hover selector to change the
+       opacity on mouse-over:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Image Transparency&lt;/h1&gt;
+&lt;p&gt;The opacity property is often used together with the :hover selector to
+ change the opacity on mouse-over:&lt;/p&gt;
+&lt;img src=&quot;img_forest.jpg&quot; alt=&quot;Forest&quot; width=&quot;170&quot; height=&quot;100&quot;&gt;
+&lt;img src=&quot;img_mountains.jpg&quot; alt=&quot;Mountains&quot; width=&quot;170&quot; height=&quot;100&quot;&gt;
+&lt;img src=&quot;img_5terre.jpg&quot; alt=&quot;Italy&quot; width=&quot;170&quot; height=&quot;100&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="Transparent_Hover_output.html">Out_Put</a></h3>
+    <hr><br>
+
+    <h2>Transparent Box</h2>
+    <p>When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: #4CAF50;
+  padding: 10px;
+}
+
+div.first {
+  opacity: 0.1;
+}
+
+div.second {
+  opacity: 0.3;
+}
+
+div.third {
+  opacity: 0.6;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Transparent Box&lt;/h1&gt;
+&lt;p&gt;When using the opacity property to add transparency to the background of an element, 
+all of its child elements become transparent as well. This can make the text inside a fully
+ transparent element hard to read:&lt;/p&gt;
+
+&lt;div class=&quot;first&quot;&gt;&lt;p&gt;opacity 0.1&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;second&quot;&gt;&lt;p&gt;opacity 0.3&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;&lt;p&gt;opacity 0.6&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p&gt;opacity 1 (default)&lt;/p&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="Transparent_Box_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Transparency using RGBA</h2>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background: rgb(76, 175, 80);
+  padding: 10px;
+}
+
+div.first {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+div.second {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+div.third {
+  background: rgba(76, 175, 80, 0.6);
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Transparent Box&lt;/h1&gt;
+&lt;p&gt;With opacity:&lt;/p&gt;
+&lt;div style=&quot;opacity:0.1;&quot;&gt;&lt;p&gt;10% opacity&lt;/p&gt;&lt;/div&gt;
+&lt;div style=&quot;opacity:0.3;&quot;&gt;&lt;p&gt;30% opacity&lt;/p&gt;&lt;/div&gt;
+&lt;div style=&quot;opacity:0.6;&quot;&gt;&lt;p&gt;60% opacity&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p&gt;opacity 1&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;With RGBA color values:&lt;/p&gt;
+&lt;div class=&quot;first&quot;&gt;&lt;p&gt;10% opacity&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;second&quot;&gt;&lt;p&gt;30% opacity&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;third&quot;&gt;&lt;p&gt;60% opacity&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;&lt;p&gt;default&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice how the text gets transparent as well as the background color when using the opacity property.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="T_using RGBA_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Text in Transparent Box</h2>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;background&quot;&gt;
+  &lt;div class=&quot;transbox&quot;&gt;
+    &lt;p&gt;This is some text that is placed in the transparent box.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="text_in_Transparent_Box_output.html">Out_Put</a></h3>
+
+</body>
+</html>

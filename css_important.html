@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS The !important </title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+           }
+           h3{
+            text-align: center;
+           }
+    </style>
+</head>
+<body>
+<h1>CSS The !important Rule</h1>
+<h2>What is !important?</h2>
+<p>The !important rule in CSS is used to add more importance to a property/value than normal.<br>
+
+    In fact, if you use the !important rule, it will override ALL previous styling rules for that
+     specific property on that element!<br><br>
+     Let us look at an example:</p>
+     <h5>Example</h5>
+     <code>
+     <pre>
+&lt!DOCTYPE html&gt
+&lthead&gt
+&ltstyle&gt&gt
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+p {
+  background-color: red !important;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp>This is some text in a paragraph.&lt/p&gt
+
+&ltp class="myclass"&gtThis is some text in a paragraph.&lt/p&gt
+
+&ltp id="myid"&gtThis is some text in a paragraph.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+   </pre>
+  </code>
+   <h3><a href="!important output.html">Output</a> </h3>
+
+
+
+   <h3>Example Explained</h3>
+   <p>In the example above. all three paragraphs will get
+     a red background color, even though the ID selector and the class selector have <br>
+     a higher specificity. The !important rule overrides the background-color property in both cases.</p>
+     <hr><br>
+
+     <h2>Important About !important </h2>
+     <p>The only way to override an !important rule is to include another !important rule on a declaration 
+        with the same (or higher)<br> specificity in the source code - and here the problem starts! This makes
+         the CSS code confusing and the debugging will be hard, especially if you have a large style sheet!<br><br>
+
+        Here we have created a simple example. It is not very clear, when you look at the CSS source code,
+         which color is considered most important:</p>
+         <h5>Example</h5>
+         <pre>
+          <code>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+#myid {
+  background-color: blue !important;
+}
+
+.myclass {
+  background-color: gray !important;
+}
+
+p {
+  background-color: red !important;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp&gtThis is some text in a paragraph.&lt/p&gt
+
+&ltp class="myclass"&gtThis is some text in a paragraph.&lt/p&gt
+
+&ltp id="myid"&gtThis is some text in a paragraph.&lt/p&gt
+
+&lt/body&gt&gt
+&lt/html&g
+         </pre>
+        </code>
+         <h3><a href="!imprtant example 2.html">Output</a> </h3>
+
+    
+</body>
+</html>

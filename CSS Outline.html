@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Outline</title>
+    <style>
+      h5{
+        font-size:large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Outline</h1>
+    <h2>CSS Outline</h2>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;  
+  padding: 20px;
+  text-align: center;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;CSS Outline&lt;/h2&gt;
+&lt;p&gt;This element has a 2px black border and a green outline with a width of 10px.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="css_outline_output.html">Out_Put</a></h3>
+<hr><br>
+    <p>An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".  </p>
+    <p>CSS has the following outline properties:
+        <ul>
+            <li>outline-style</li>
+            <li>outline-color</li>
+            <li>outline-width</li>
+            <li>outline-offset</li>
+            <li>outline</li>
+        </ul>
+    </p>
+    <h2>CSS Outline Style</h2>
+    <p>The outline-style property specifies the style of the outline, and can have one of the following values:</p>
+    <ul>
+        <li>dotted - Defines a dotted outline</li>
+        <li>dashed - Defines a dashed outline</li>
+        <li>solid - Defines a solid outline</li>
+        <li>double - Defines a double outline</li>
+        <li>groove - Defines a 3D grooved outline</li>
+        <li>ridge - Defines a 3D ridged outline</li>
+        <li>inset - Defines a 3D inset outline</li>
+        <li>outset - Defines a 3D outset outline</li>
+        <li>none - Defines no outline</li>
+        <li>hidden - Defines a hidden outline</li>
+    </ul>
+    <p>The following example shows the different outline-style values:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {outline-color:red;}
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The outline-style Property&lt;/h2&gt;
+
+&lt;p class="dotted"&gt;A dotted outline&lt;/p&gt;
+&lt;p class="dashed"&gt;A dashed outline&lt;/p&gt;
+&lt;p class="solid"&gt;A solid outline&lt;/p&gt;
+&lt;p class="double"&gt;A double outline&lt;/p&gt;
+&lt;p class="groove"&gt;A groove outline. The effect depends on the outline-color value.&lt;/p&gt;
+&lt;p class="ridge"&gt;A ridge outline. The effect depends on the outline-color value.&lt;/p&gt;
+&lt;p class="inset"&gt;An inset outline. The effect depends on the outline-color value.&lt;/p&gt;
+&lt;p class="outset"&gt;An outset outline. The effect depends on the outline-color value.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="outline_style_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS Outline Width</h2>
+    <p>The outline-width property specifies the width of the outline, and can have one of the following values:</p>
+    <ul>
+        <li>thin (typically 1px)</li>
+        <li>medium (typically 3px)</li>
+        <li>thick (typically 5px)</li>
+        <li>A specific size (in px, pt, cm, em, etc)</li>
+    </ul>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+p.ex4 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The outline-width Property&lt;/h2&gt;
+
+&lt;p class="ex1"&gt;A thin outline.&lt;/p&gt;
+&lt;p class="ex2"&gt;A medium outline.&lt;/p&gt;
+&lt;p class="ex3"&gt;A thick outline.&lt;/p&gt;
+&lt;p class="ex4"&gt;A 4px thick outline.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="outline_width_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS Outline Color</h2>
+    <p>The outline-color property is used to set the color of the outline.</p>
+    <p>The color can be set by:</p>
+    <ul>
+        <li>name - specify a color name, like "red"</li>
+        <li> HEX - specify a hex value, like "#ff0000"</li>
+        <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+        <li>HSL - specify a HSL value, like "hsl(0, 100%, 50%)"</li>
+        <li>invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)</li>
+    </ul>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.ex1 {
+  border: 2px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+
+p.ex2 {
+  border: 2px solid black;
+  outline-style: dotted;
+  outline-color: blue;
+}
+
+p.ex3 {
+  border: 2px solid black;
+  outline-style: outset;
+  outline-color: grey;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The outline-color Property&lt;/h2&gt;
+&lt;p&gt;The outline-color property is used to set the color of the outline.&lt;/p&gt;
+
+&lt;p class="ex1"&gt;A solid red outline.&lt;/p&gt;
+&lt;p class="ex2"&gt;A dotted blue outline.&lt;/p&gt;
+&lt;p class="ex3"&gt;An outset grey outline.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="outline_color_output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>CSS Outline - Shorthand property</h2>
+    <p>The outline property is a shorthand property for setting the following individual outline properties:</p>
+    <ul>
+        <li>outline-width</li>
+        <li>outline-style (required)</li>
+        <li>outline-color</li>
+    </ul>
+
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.ex1 {outline: dashed;}
+p.ex2 {outline: dotted red;}
+p.ex3 {outline: 5px solid yellow;}
+p.ex4 {outline: thick ridge pink;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The outline Property&lt;/h2&gt;
+
+&lt;p class="ex1"&gt;A dashed outline.&lt;/p&gt;
+&lt;p class="ex2"&gt;A dotted red outline.&lt;/p&gt;
+&lt;p class="ex3"&gt;A 5px solid yellow outline.&lt;/p&gt;
+&lt;p class="ex4"&gt;A thick ridge pink outline.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="Outline _Shorthand_output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>CSS Outline - Shorthand property</h2>
+    <p>The outline property is a shorthand property for setting the following individual outline properties:</p>
+    <ul>
+        <li>outline-width</li>
+        <li>outline-style (required)</li>
+        <li>outline-color</li>
+    </ul>
+
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.ex1 {outline: dashed;}
+p.ex2 {outline: dotted red;}
+p.ex3 {outline: 5px solid yellow;}
+p.ex4 {outline: thick ridge pink;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The outline Property&lt;/h2&gt;
+
+&lt;p class="ex1"&gt;A dashed outline.&lt;/p&gt;
+&lt;p class="ex2"&gt;A dotted red outline.&lt;/p&gt;
+&lt;p class="ex3"&gt;A 5px solid yellow outline.&lt;/p&gt;
+&lt;p class="ex4"&gt;A thick ridge pink outline.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="Outline _Shorthand_output.html">Out_Put</a></h3>
+<hr><br>
+
+    <h2>CSS Outline Offset</h2>
+    <p>The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.</p>
+    <ul>
+        <li>outline-width</li>
+        <li>outline-style (required)</li>
+        <li>outline-color</li>
+    </ul>
+
+    <h5>Example-01</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The outline-offset Property&lt;/h2&gt;
+
+&lt;p&gt;This paragraph has an outline 15px outside the border edge.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+        </pre>
+    </code>
+
+    <h3><a href="outline_offset_ex1_output.html">Out_Put</a></h3>
+    
+    <h5>Example-02</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  margin: 30px;
+  background: yellow;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The outline-offset Property&lt;/h2&gt;
+
+&lt;p&gt;This paragraph has an outline of 15px outside the border edge.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    
+    <h3><a href="outline_offset_ex2_output.html">Out_Put</a></h3>
+</body>
+</html>

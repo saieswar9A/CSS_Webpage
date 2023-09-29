@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counters</title>
+    <link rel="stylesheet" href="style_html.css">
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<h1>CSS Counters</h1>
+<p>CSS counters are "variables" maintained by CSS whose values can be incremented
+   by CSS rules (to track how many times<br> they are used). Counters let you adjust the
+    appearance of content based on its placement in the document.</p>
+  <h2>Automatic Numbering With Counters</h2>
+  <p>CSS counters are like "variables". The variable values can be incremented by CSS rules
+     (which will track how many times they are<br> used).<br><br>
+
+    To work with CSS counters we will use the following properties:<br><br>
+    
+    counter-reset - Creates or resets a counter<br>
+    counter-increment - Increments a counter value<br>
+    content - Inserts generated content<br>
+    counter() or counters() function - Adds the value of a counter to an element<br>
+    To use a CSS counter, it must first be created with counter-reset.<br><br>
+    
+    The following example creates a counter for the page (in the body selector), then increments the counter value for each &lt;h2&gt;<br>
+       element and adds "Section &lt;value of the counter&gt;:" to the beginning of each &lt;h2&gt; element:</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;style&gt;
+      body {
+        counter-reset: section;
+      }
+      
+      h2::before {
+        counter-increment: section;
+        content: &quot;Section &quot; counter(section) &quot;: &quot;;
+      }
+      &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      
+      &lt;h1&gt;Using CSS Counters&lt;/h1&gt;
+      
+      &lt;h2&gt;HTML Tutorial&lt;/h2&gt;
+      &lt;h2&gt;CSS Tutorial&lt;/h2&gt;
+      &lt;h2&gt;JavaScript Tutorial&lt;/h2&gt;
+      &lt;h2&gt;Python Tutorial&lt;/h2&gt;
+      &lt;h2&gt;SQL Tutorial&lt;/h2&gt;
+      
+      &lt;/body&gt;
+      &lt;/html&gt;
+      
+    </pre>
+  </code>
+
+    <h3><a href="css counters Automatic Numbering With Counters output.html">Output</a></h3>
+    <hr><br>
+
+    <h2>Nesting Counters</h2>
+    <p>The following example creates one counter for the page (section) and one counter for each &lt;h1&gt; element (subsection). The<br>
+       "section" counter will be counted for each &lt;h1&gt; element with "Section &lt;value of the section counter&gt;.", and the "subsection"<br>
+         counter will be counted for each &lt;h2&gt; element with "&lt;value of the section counter&gt;.&lt;value of the subsection counter&gt;":</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;style&gt;
+      body {
+        counter-reset: section;
+      }
+      
+      h1 {
+        counter-reset: subsection;
+      }
+      
+      h1::before {
+        counter-increment: section;
+        content: "Section " counter(section) ". ";
+      }
+      
+      h2::before {
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) " ";
+      }
+      &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      
+      &lt;h1&gt;HTML/CSS Tutorials&lt;/h1&gt;
+      &lt;h2&gt;HTML&lt;/h2&gt;
+      &lt;h2&gt;CSS&lt;/h2&gt;
+      &lt;h2&gt;Bootstrap&lt;/h2&gt;
+      &lt;h2&gt;W3.CSS&lt;/h2&gt;
+      
+      &lt;h1&gt;Scripting Tutorials&lt;/h1&gt;
+      &lt;h2&gt;JavaScript&lt;/h2&gt;
+      &lt;h2&gt;jQuery&lt;/h2&gt;
+      &lt;h2&gt;React&lt;/h2&gt;
+      
+      &lt;h1&gt;Programming Tutorials&lt;/h1&gt;
+      &lt;h2&gt;Python&lt;/h2&gt;
+      &lt;h2&gt;Java&lt;/h2&gt;
+      &lt;h2&gt;C++&lt;/h2&gt;
+      
+      &lt;/body&gt;
+      &lt;/html&gt;
+      
+    </pre>
+  </code>
+    <h3><a href="css counters Nesting Counters output.html">Output</a></h3>
+
+    <hr><br>
+    <p>A counter can also be useful to make outlined lists because a new instance of a counter is automatically created in child elements.<br>
+       Here we use the counters() function to insert a string between different levels of nested counters:</p>
+      <h5>Example 2</h5> 
+      <code>
+      <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;style&gt;
+        ol {
+          counter-reset: section;
+          list-style-type: none;
+        }
+        
+        li::before {
+          counter-increment: section;
+          content: counters(section,".") " ";
+        }
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;
+          &lt;li&gt;item   
+          &lt;ol&gt;
+            &lt;li&gt;item&lt;/li&gt;
+            &lt;li&gt;item&lt;/li&gt;
+            &lt;li&gt;item
+            &lt;ol&gt;
+              &lt;li&gt;item&lt;/li&gt;
+              &lt;li&gt;item&lt;/li&gt;
+              &lt;li&gt;item&lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt;item&lt;/li&gt;
+          &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li&gt;item&lt;/li&gt;
+          &lt;li&gt;item&lt;/li&gt;
+        &lt;/ol&gt;
+        
+        &lt;ol&gt;
+          &lt;li&gt;item&lt;/li&gt;
+          &lt;li&gt;item&lt;/li&gt;
+        &lt;/ol&gt;
+        
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </pre>
+    </code>
+     <h3><a href="css counters Nesting Counters ex 2 output.html">Output</a></h3> 
+      
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Pseudo-elements</title>
+    <Style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </Style>
+</head>
+<body>
+    <h2>What are Pseudo-Elements?</h2>
+    <P>A CSS pseudo-element is used to style specified parts of an element.</P>
+    <p>For example, it can be used to:</p>
+    <ul>
+        <li>Style the first letter, or line, of an element</li>
+        <li>Insert content before, or after, the content of an element</li>
+    </ul>
+    <h5>Syntax</h5>
+    <code>
+        <pre>
+            selector::pseudo-element {
+                property: value;
+              }
+        </pre>
+    </code>
+    <hr><br>
+    <h2>The ::first-line Pseudo-element</h2>
+    <p>The ::first-line pseudo-element is used to add a special style to the first line of a text.</p>
+    <p>The following example formats the first line of the text in all &lt;p&gt; elements:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;You can use the ::first-line pseudo-element to add a special effect to the 
+first line of a text. Some more text. And even more, and more, and more, and more, and more, 
+and more, and more, and more, and more, and more, and more, and more.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="first-line_output.html">Out_Put</a></h3>
+    <hr><br>
+    <P>Note: The ::first-line pseudo-element can only be applied to block-level elements.</P>
+    <P>The following properties apply to the ::first-line pseudo-element:</P>
+    <ul>
+        <li>font properties</li>
+        <li>color properties</li>
+        <li>background properties</li>
+        <li>word-spacing</li>
+        <li>letter-spacing</li>
+        <li>text-decoration</li>
+        <li>vertical-align</li>
+        <li>text-transform</li>
+        <li>line-height</li>
+        <li>clear</li>
+    </ul>
+
+    <h2>The ::first-letter Pseudo-element</h2>
+    <p>The ::first-letter pseudo-element is used to add a special style to the first letter of a text.</p>
+    <p>The following example formats the first letter of the text in all &lt;p&gt; elements: </p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;You can combine the ::first-letter and ::first-line pseudo-elements to add a 
+special effect to the first letter and the first line of a text!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="first-letter_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Pseudo-elements and HTML Classes</h2>
+    <p>Pseudo-elements can be combined with HTML classes: </p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.intro::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+}  
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p class=&quot;intro&quot;&gt;This is an introduction.&lt;/p&gt;
+&lt;p&gt;This is a paragraph with some text. A bit more text even.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="Pseudo-elements_output.html">Out_Put</a></h3>
+    <hr><br>
+
+    <h2>Multiple Pseudo-elements</h2>
+    <p>Several pseudo-elements can also be combined.</p>
+    <p>
+        the first letter of a paragraph will be red, in an xx-large font size. 
+        The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be
+         the default font size and color:
+    </p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;You can combine the ::first-letter and ::first-line pseudo-elements to add a
+ special effect to the first letter and the first line of a text!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="Multiple_Pseudo_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS - The ::before Pseudo-element</h2>
+    <p>The ::before pseudo-element can be used to insert some content before the content of an element.</p>
+    <p>The following example inserts an image before the content of each &lt;h1&gt; element:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1::before {
+  content: url(smiley.gif);
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;The ::before pseudo-element inserts content before the content of an element.&lt;/p&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="before_Pseudo_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS - The ::after Pseudo-element</h2>
+    <p>The ::after pseudo-element can be used to insert some content after the content of an element.</p>
+    <P>The following example inserts an image after the content of each &lt;h1&gt; element:</P>
+    <h5>Heading</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1::after {
+  content: url(smiley.gif);
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;The ::after pseudo-element inserts content after the content of an element.&lt;/p&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="after_Pseudo_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS - The ::marker Pseudo-element</h2>
+    <p>The ::marker pseudo-element selects the markers of list items.</p>
+    <p>The following example styles the markers of list items:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+::marker { 
+  color: red;
+  font-size: 23px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="marker_Pseudo_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS - The ::selection Pseudo-element</h2>
+    <p>The ::selection pseudo-element matches the portion of an element that is selected by a user.</p>
+    <p>The following CSS properties can be applied to ::selection: color, background, cursor, and outline.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+::selection {
+  color: red;
+  background: yellow;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Select some text on this page:&lt;/h1&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;div&gt;This is some text in a div element.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="selection_Pseudo_output.html">Out_Put</a></h3>
+
+
+</body>
+</html>

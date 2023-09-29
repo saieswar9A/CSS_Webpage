@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Layout - Horizontal & Vertical Align</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>
+        CSS Layout - Horizontal & Vertical Align
+    </h1>
+    <h2>Center Align Elements</h2>
+    <p>To horizontally center a block element (like &lt;div&gt;), use margin: auto;</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Center Align Elements&lt;/h2&gt;
+&lt;p&gt;To horizontally center a block element (like div), use margin: auto;&lt;/p&gt;
+
+&lt;div class="center"&gt;
+  &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="Align_output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>Center Align Text</h2>
+    <p>To just center the text inside an element, use text-align: center;</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Center Text&lt;/h2&gt;
+
+&lt;div class="center"&gt;
+  &lt;p&gt;This text is centered.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="center_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Center an Image</h2>
+    <p>To center an image, set left and right margin to auto and make it into a block element:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Center an Image&lt;/h2&gt;
+&lt;p&gt;To center an image, set left and right margin to auto, and make it into a block element.&lt;/p&gt;
+
+&lt;img src="paris.jpg" alt="Paris" style="width:40%"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="img_center_output.html">Out_Put</a></h3>
+
+    
+</body>
+</html>

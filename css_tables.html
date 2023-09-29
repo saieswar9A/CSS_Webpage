@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS_Tables</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Tables</h1>
+    <p>The look of an HTML table can be greatly improved with CSS:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;A Fancy Table&lt;/h1&gt;
+
+&lt;table id="customers"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Company&lt;/th&gt;
+    &lt;th&gt;Contact&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alfreds Futterkiste&lt;/td&gt;
+    &lt;td&gt;Maria Anders&lt;/td&gt;
+    &lt;td&gt;Germany&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Berglunds snabbköp&lt;/td&gt;
+    &lt;td&gt;Christina Berglund&lt;/td&gt;
+    &lt;td&gt;Sweden&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Centro comercial Moctezuma&lt;/td&gt;
+    &lt;td&gt;Francisco Chang&lt;/td&gt;
+    &lt;td&gt;Mexico&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;!-- Other table rows --&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="tables_output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>Table Borders</h2>
+    <p>To specify table borders in CSS, use the border property.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, th, td {
+  border: 1px solid;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Add a border to a table:&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="borders_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Full-Width Table</h2>
+    <p>The table above might seem small in some cases. If you need a table that should span the entire screen (full-width), add width: 100% to the &lt;table&gt; element:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Full-width Table&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="Full-Width Table_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Collapse Table Borders</h2>
+    <p>The border-collapse property sets whether the table borders should be collapsed into a single border:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, td, th {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Let the table borders collapse&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="CTB_output.html">Out_Put</a></h3>
+
+    <h5>Example-1</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+  width: 100%;
+  border: 1px solid;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Single Border Around The Table&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="CTB_E2.html">Out_Put</a></h3>
+    <hr><br>
+    <h1>CSS Table Size</h1>
+    <h2>Table Width and Height</h2>
+    <p>The width and height of a table are defined by the width and height properties.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The width and height Properties&lt;/h2&gt;
+
+&lt;p&gt;Set the width of the table, and the height of the table header row:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="TW&H_output.html">Out_Put</a></h3>
+<br>
+    <h5>Example-1</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The width and height Properties&lt;/h2&gt;
+
+&lt;p&gt;Set the width of the table, and the height of the table header row:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="TW&H_e1_output.html">Out_Put</a></h3>
+  <hr><br>
+     <h1>CSS Table Alignment</h1>
+     <h2>Horizontal Alignment</h2>
+     <P>The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.</P>
+     <p>To center-align the content of  <td> elements as well, use text-align: center:</p>
+     <h5>Example</h5>
+     <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The text-align Property&lt;/h2&gt;
+
+&lt;p&gt;This property sets the horizontal alignment (like left, right, or center) of the content in th or td.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+     </code>
+
+     <h3><a href="horizontal_output.html">Out_Put</a></h3>
+     <hr><br>
+     <p>To left-align the content, force the alignment of &lt;th&gt; elements to be left-aligned, with the text-align: left property:</p>
+     <h5>Example</h5>
+     <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The text-align Property&lt;/h2&gt;
+
+&lt;p&gt;This property sets the horizontal alignment (like left, right, or center) of the content in th or td.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+     </code>
+
+     <h3><a href="align_left_output.html">Out_Put</a></h3>
+     <hr><br>
+     <h2>Vertical Alignment</h2>
+     <p>The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.</p>
+     <h5>Example</h5>
+     <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The vertical-align Property&lt;/h2&gt;
+
+&lt;p&gt;This property sets the vertical alignment (like top, bottom, or middle) of the content in th or td.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+     </code>
+
+
+     <h3><a href="Vertical_a-output.html">Out_Put</a></h3>
+     <hr><br>
+     <h2>Table Padding</h2>
+     <P>To control the space between the border and the content in a table, use the padding property on <td> and <th> elements:</P>
+     <h5>Exmaple</h5>
+     <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The padding Property&lt;/h2&gt;
+
+&lt;p&gt;This property adds space between the border and the content in a table.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+     </code>
+
+     <h3><a href="t_padding_outpu.html">Out_Put</a></h3>
+     <hr><br>
+     <h2>Horizontal Dividers</h2>
+     <P>Add the border-bottom property to &lt;th&gt; and &lt;td&gt; for horizontal dividers:</P>
+     <h5>Example</h5>
+     <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Bordered Table Dividers&lt;/h2&gt;
+&lt;p&gt;Add the border-bottom property to th and td for horizontal dividers:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+     </code>
+     <h3><a href="H_D_outpu.html">Out_Put</a></h3>
+     <hr><br>
+     <h2>Hoverable Table</h2>
+     <p>Use the :hover selector on <tr> to highlight table rows on mouse over:</p>
+        <h5>Example</h5>
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: coral;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Hoverable Table&lt;/h2&gt;
+
+&lt;p&gt;Move the mouse over the table rows to see the effect.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;First Name&lt;/th&gt;
+    &lt;th&gt;Last Name&lt;/th&gt;
+    &lt;th&gt;Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+        </code>
+        <h3><a href="Hover_T_output.html">Out_Put</a></h3>
+        <hr><br>
+        <h2>Striped Tables</h2>
+        <p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</p>
+        <h5>Example</h5>
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Striped Table&lt;/h2&gt;
+
+&lt;p&gt;For zebra-striped tables, use the nth-child() selector and add a background-color t
+o all even (or odd) table rows:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+  &lt;th&gt;First Name&lt;/th&gt;
+  &lt;th&gt;Last Name&lt;/th&gt;
+  &lt;th&gt;Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td&gt;Peter&lt;/td&gt;
+  &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td&gt;Lois&lt;/td&gt;
+  &lt;td&gt;Griffin&lt;/td&gt;
+  &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td&gt;Joe&lt;/td&gt;
+  &lt;td&gt;Swanson&lt;/td&gt;
+  &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;td&gt;Cleveland&lt;/td&gt;
+  &lt;td&gt;Brown&lt;/td&gt;
+  &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+        </code>
+
+        <h3><a href="Stripped_output.html">Out_Put</a></h3>
+        <hr><br>
+        <h2>Table Color</h2>
+        <p>The example below specifies the background color and text color of <th> elements:</p>
+        <h5>Example</h5>
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Colored Table Header&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lois&lt;/td&gt;
+    &lt;td&gt;Griffin&lt;/td&gt;
+    &lt;td&gt;$150&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Joe&lt;/td&gt;
+    &lt;td&gt;Swanson&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cleveland&lt;/td&gt;
+    &lt;td&gt;Brown&lt;/td&gt;
+    &lt;td&gt;$250&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </pre>
+        </code>
+        <h3><a href="T_color.html">Out_Put</a></h3>
+        <hr><br>
+        <h2>Responsive Table</h2>
+        <p>A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:</p>
+        <p>Add a container element (like &lt;div&gt;) with overflow-x:auto around the &lt;table&gt; element to make it responsive:</p>
+        <h5>Example</h5>
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Responsive Table&lt;/h2&gt;
+&lt;p&gt;A responsive table will display a horizontal scroll bar if the screen is too 
+small to display the full content. Resize the browser window to see the effect:&lt;/p&gt;
+&lt;p&gt;To create a responsive table, add a container element (like div) with
+ &lt;strong&gt;overflow-x:auto&lt;/strong&gt; around the table element:&lt;/p&gt;
+
+&lt;div style="overflow-x: auto;"&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+      &lt;th&gt;Points&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jill&lt;/td&gt;
+      &lt;td&gt;Smith&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Eve&lt;/td&gt;
+      &lt;td&gt;Jackson&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Adam&lt;/td&gt;
+      &lt;td&gt;Johnson&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </code>
+        <h3><a href="rsp_table_output.html">Out_Put</a></h3>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Image Sprites</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h2>Image Sprites</h2>
+    <p>An image sprite is a collection of images put into a single image.</p>
+    <p>A web page with many images can take a long time to load and generates multiple server requests.</p>
+    <p>Using image sprites will reduce the number of server requests and save bandwidth.</p>
+    <h2>Image Sprites</h2>
+    <p>Instead of using three separate images, we use this single image ("img_navsprites.gif"):</p>
+    <p>With CSS, we can show just the part of the image we need.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#home {
+  width: 46px;
+  height: 44px;
+  background: url(img_navsprites.gif) 0 0;
+}
+
+#next {
+  width: 43px;
+  height: 44px;
+  background: url(img_navsprites.gif) -91px 0;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;img id="home" src="img_trans.gif" width="1" height="1"&gt;
+&lt;img id="next" src="img_trans.gif" width="1" height="1"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="Image_Sprites_output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>Image Sprites - Create a Navigation List</h2>
+    <p>We want to use the sprite image ("img_navsprites.gif") to create a navigation list.</p>
+    <p>We will use an HTML list, because it can be a link and also supports a background image:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#home {
+  width: 46px;
+  height: 44px;
+  background: url(img_navsprites.gif) 0 0;
+}
+
+#next {
+  width: 43px;
+  height: 44px;
+  background: url(img_navsprites.gif) -91px 0;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;img id="home" src="img_trans.gif" width="1" height="1"&gt;
+&lt;img id="next" src="img_trans.gif" width="1" height="1"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+
+    <h3><a href="Image Sprites - Create a Navigation List_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Image Sprites - Hover Effect</h2>
+    <p>Now we want to add a hover effect to our navigation list.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#navlist {
+  position: relative;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+
+#home {
+  left: 0px;
+  width: 46px;
+  background: url('img_navsprites_hover.gif') 0 0;
+}
+
+#prev {
+  left: 63px;
+  width: 43px;
+  background: url('img_navsprites_hover.gif') -47px 0;
+}
+
+#next {
+  left: 129px;
+  width: 43px;
+  background: url('img_navsprites_hover.gif') -91px 0;
+}
+
+#home a:hover {
+  background: url('img_navsprites_hover.gif') 0 -45px;
+}
+
+#prev a:hover {
+  background: url('img_navsprites_hover.gif') -47px -45px;
+}
+
+#next a:hover {
+  background: url('img_navsprites_hover.gif') -91px -45px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;ul id="navlist"&gt;
+  &lt;li id="home"&gt;&lt;a href="default.asp"&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li id="prev"&gt;&lt;a href="css_intro.asp"&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li id="next"&gt;&lt;a href="css_syntax.asp"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="Image Sprites - Hover Effect_output.html">Out_Put</a></h3>
+</body>
+</html>

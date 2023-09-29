@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Units</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Units</h1>
+    <p>
+        CSS has several different units for expressing a length.<br><br>
+
+Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.<br><br>
+
+Length is a number followed by a length unit, such as 10px, 2em, etc.
+    </p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 25px;
+  line-height: 50px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </code>
+<h3><a href="css units ex1 output.html">Output</a></h3><br>
+<p>Note: A whitespace cannot appear between the number and the unit. However,
+   if the value is 0, the unit can be omitted.<br><br>
+
+    For some CSS properties, negative lengths are allowed.<br><br>
+    
+    There are two types of length units: absolute and relative.</p>
+    <hr><br>
+<h2>Absolute Lengths</h2>
+<p>The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.<br><br>
+
+    Absolute length units are not recommended for use on screen, because screen sizes vary so much. However,
+     they can be used if the output medium is known, such as for print layout.
+    
+    </p>
+    <h2>cm</h2>
+    <p>centimeters</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {font-size: 1.5cm;}
+h2 {font-size: 1cm;}
+p {
+  font-size: 0.5cm;
+  line-height: 1cm;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    </code>
+    <h3><a href="units cm output.html">Output</a></h3>
+    <hr><br>
+    <h2>mm</h2>
+    <p>millimeters</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {font-size: 15mm;}
+h2 {font-size: 10mm;}
+p {
+  font-size: 5mm;
+  line-height: 10mm;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </pre>
+</code>
+    <h3><a href="units mm output.html">Out_put</a></h3>
+    <hr><br>
+    <h2>in</h2>
+    <p>	inches (1in = 96px = 2.54cm)</p>
+    <h2>Example</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {font-size: 1in;}
+h2 {font-size: 0.5in;}
+p {
+  font-size: 0.2in;
+  line-height: 0.5in;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </pre>
+  </code>
+    <h3><a href="units in output.html">Output</a></h3>
+    <hr><br>
+    <h2>px *</h2>
+    <p>pixels (1px = 1/96th of 1in)</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {font-size: 50px;}
+h2 {font-size: 30px;}
+p {
+  font-size: 15px;
+  line-height: 20px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </pre>
+  </code>
+    <h3><a href="units px output.html">Output</a></h3>
+<hr><br>
+    <h2>pt</h2>
+    <p>points (1pt = 1/72 of 1in)</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;style&gt;
+        h1 {font-size: 50pt;}
+        h2 {font-size: 25pt;}
+        p {
+          font-size: 15pt;
+          line-height: 25pt;
+        }
+        &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        
+        &lt;h1&gt;This is heading 1&lt;/h1&gt;
+        &lt;h2&gt;This is heading 2&lt;/h2&gt;
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        &lt;p&gt;This is another paragraph.&lt;/p&gt;
+        
+        &lt;/body&gt;
+        &lt;/html&gt;
+          
+    </pre>
+  </code>
+   <h3><a href="units pt output.html">Output</a></h3>
+<hr><br>
+    <h2>pc</h2>
+    <p>picas (1pc = 12 pt)</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {font-size: 4.5pc;}
+h2 {font-size: 3pc;}
+p {
+  font-size: 1.5pc;
+  line-height: 3pc;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </pre>
+    </code>
+    <a href="units pc output.html"><h3>Output</h3></a> <br>
+    <p>* Pixels (px) are relative to the viewing device.
+         For low-dpi devices, 1px is one device pixel (dot)
+          of the display. For printers and<br> high resolution 
+          screens 1px implies multiple device pixels.</p>
+          <hr><br>
+
+    <h2>Relative Lengths</h2>
+    <p>Relative length units specify a length relative to another 
+        length property. Relative length units scale better between different rendering mediums.</p>
+        <h2>em</h2>
+        <p>	Relative to the font-size of the element (2em means 2 times the size of the current font)</p>
+        <h5>Example</h5>
+        <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  font-size: 16px;
+  line-height: 2em;
+}
+
+div {
+  font-size: 30px;
+  border: 1px solid black;
+}
+
+span {
+  font-size: 0.5em;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;These paragraphs have a calculated line-height of: 2x16px = 32px.&lt;/p&gt;
+&lt;p&gt;These paragraphs have a calculated line-height of: 2x16px = 32px.&lt;/p&gt;
+&lt;p&gt;These paragraphs have a calculated line-height of: 2x16px = 32px.&lt;/p&gt;
+&lt;div&gt;The font-size of the div element is set to 30px. &lt;span&gt;The span element 
+inside the div element has a font-size of 0.5em, which equals to 0.5x30 = 15px&lt;/span&gt;.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+        <h3><a href="units em output.html">Output</a></h3>   
+        <hr><br>
+        <h2>ex</h2>  
+        <p>Relative to the x-height of the current font (rarely used)</p>
+        <h5>Example</h5>
+        <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  font-size: 30px;
+  border: 1px solid black;
+}
+
+span {
+  font-size: 1ex;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div&gt;The font-size of the div element is set to 30px. &lt;span&gt;The span element inside the div element has a font-size of 1ex&lt;/span&gt;.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+    
+        <h3><a href="units ex output.html">Output</a></h3>
+        <hr><br>
+        <h2>ch</h2>
+        <p>Relative to width of the "0" (zero)</p>
+        <h5>Example</h5>
+        <code>
+        <pre>
+          
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+ font-size:16px;
+}
+
+div {
+  font-size: 3ch;
+  border: 1px solid black;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;The font-size of this document is 16px.&lt;/p&gt;
+
+&lt;div&gt;The font-size of this div element is 3ch.&lt;/div&gt;
+
+&lt;p&gt;The ch unit sets the font-size relative to the width of the character &quot;0&quot;.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+       <h3> <a href="units ch output.html">Output</a></h3>
+       <hr><br>
+      <h2>rem</h2>
+      <p>Relative to font-size of the root element</p>
+      <h5>Example</h5>
+      <code>
+      <pre>
+        &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+ font-size: 16px;
+}
+
+div {
+  font-size: 2rem;
+  border: 1px solid black;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;The font-size of this document is 16px.&lt;/p&gt;
+
+&lt;div&gt;The font-size of this div element is 2rem.&lt;/div&gt;
+
+&lt;p&gt;The rem unit sets the font-size relative to the browser's base font-size and will not inherit from its parents.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+      </pre>
+    </code>
+      <h3><a href="units rem output.html">Output</a></h3>
+<hr><br>
+      <h2>vw</h2>
+      <p>Relative to 1% of the width of the viewport*</p>
+      <h5>Example</h5>
+      <code>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {
+  font-size: 20vw;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello&lt;/h1&gt;
+
+&lt;p&gt;Resize the width of the browser window to see how the font-size of h1 changes.&lt;/p&gt;
+&lt;p&gt;1vw = 1% of viewport width.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+      </pre>
+    </code>
+     <h3> <a href="units vw output.html">Output</a></h3>
+     <hr><br>
+    <h2>vh</h2>
+    <p>	Relative to 1% of the height of the viewport*</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {
+  font-size: 20vh;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello&lt;/h1&gt;
+
+&lt;p&gt;Resize the height of the browser window to see how the font-size of h1 changes.&lt;/p&gt;
+&lt;p&gt;1vh = 1% of viewport height.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </pre>
+  </code>
+    <h3><a href="units vh output.html">Output</a></h3>
+    <hr><br>
+    <h2>vmin</h2>
+    <p>Relative to 1% of viewport's* smaller dimension</p>
+    <h5>Example</h5>
+    <code>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {
+  font-size: 15vmin;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello&lt;/h1&gt;
+
+&lt;p&gt;Resize the browser window (both width and height) to see how the font-size of h1 changes.&lt;/p&gt;
+&lt;p&gt;1vmin = 1vw or 1vh, whichever is smaller.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </pre>
+</code>
+   <h3> <a href="units vmin output.html">Output</a></h3>
+   <hr><br>
+  <h2>vmax</h2>
+  <p>Relative to 1% of viewport's* larger dimension</p>
+  <h5>Example</h5>
+  <code>
+  <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {
+  font-size: 15vmax;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello&lt;/h1&gt;
+
+&lt;p&gt;Resize the browser window (both width and height) to see how the font-size of h1 changes.&lt;/p&gt;
+&lt;p&gt;1vmax = 1vw or 1vh, whichever is larger.&lt;/p&gt;
+&lt;p&gt;The vmax unit is not supported in Internet Explorer or Safari 6.1 and earlier versions.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+  </pre>
+</code>
+ <h3> <a href="units vmax output.html">Output</a></h3>
+ <hr><br>
+  <h2>%</h2>
+  <p>	Relative to the parent element</p>
+  <h5>Example</h5>
+  <code>
+  <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+ font-size: 16px;
+}
+
+div {
+  font-size: 150%;
+  border: 1px solid black;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;The font-size of this document is 16px.&lt;/p&gt;
+
+&lt;div&gt;The font-size of this div element is 150%.&lt;/div&gt;
+
+&lt;p&gt;The % unit sets the font-size relative to the current font-size.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+  </pre>
+  </code>
+ <h3><a href="units % output.html">Output</a></h3>
+</body>
+</html>

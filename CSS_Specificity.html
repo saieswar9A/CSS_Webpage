@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Specificity</title>
+    <style>
+        h5{
+            font-size: large;
+            font-weight: bold;
+            margin-left: 3%;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Specificity</h1>
+    <h2>CSS Specificity</h2>
+    <p>If there are two or more CSS rules that point to the same element, the selector with the highest 
+        specificity value will "win", and its style declaration will be applied to that HTML element.<br><br>
+
+        Think of specificity as a score/rank that determines which style declaration is ultimately applied to an element.<br><br>
+
+        
+        Look at the following examples:</p>
+        <h5>Example 1</h5>
+        <code>  
+            <pre>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle>
+p {color: red;} 
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp&gtHello World!&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+        </pre>
+    </code>
+
+     <h3><a href="specificity ex1 output.html">Output</a></h3>
+     <br>
+<h5>Example 2</h5>
+<code>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.test {color: green;} 
+p {color: red;} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p class="test"&gt;Hello World!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</code>
+<h3><a href="specificity ex2 output.html">Output</a></h3>
+</body>
+</html>

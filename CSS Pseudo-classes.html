@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-classes</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      H3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>What are Pseudo-classes?</h1>
+    <p>A pseudo-class is used to define a special state of an element.</p>
+    <p>For example, it can be used to:</p>
+    <ul>
+        <li>Style an element when a user mouses over it</li>
+        <li>Style visited and unvisited links differently</li>
+        <li>Style an element when it gets focus</li>
+    </ul>
+
+    <h5>Syntax</h5>
+    <p>The syntax of pseudo-classes:</p>
+    <code>
+        <pre>
+        selector:pseudo-class {
+            property: value;
+          }
+        </pre>
+    </code>
+<hr><br>
+    <h2>Anchor Pseudo-classes</h2>
+    <p>Links can be displayed in different ways:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+            &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Styling a link depending on state&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a href=&quot;default.asp&quot; target=&quot;_blank&quot;&gt;This is a link&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:active MUST come after a:hover in the CSS definition in order to be effective.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <hr><br>
+    <h3><a href="Pseudo-classes_output.html">Out_Put</a></h3>
+    <link rel="stylesheet" href="style_html.css">
+
+    <h2>Pseudo-classes and HTML Classes</h2>
+    <p>Pseudo-classes can be combined with HTML classes:</p>
+    <P>When you hover over the link in the example, it will change color:</P>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+a.highlight:hover {
+  color: #ff0000;
+  font-size: 22px;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Pseudo-classes and HTML Classes&lt;/h2&gt;
+
+&lt;p&gt;When you hover over the first link below, it will change color and font size:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;highlight&quot; href=&quot;css_syntax.asp&quot;&gt;CSS Syntax&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;default.asp&quot;&gt;CSS Tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="P&H_classes_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Hover on &lt;div&gt;</h2>
+    <p>An example of using the :hover pseudo-class on a &lt;div&gt; element:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: green;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+div:hover {
+  background-color: blue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Mouse over the div element below to change its background color:&lt;/p&gt;
+
+&lt;div&gt;Mouse Over Me&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="hover_div_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Simple Tooltip Hover</h2>
+    <p>Hover over a &lt;div&gt; element to show a &lt;p&gt; element (like a tooltip):</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div&gt;Hover over this div element to show the p element
+  &lt;p&gt;Tada! Here I am!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="Tooltip_Hover_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS - The :first-child Pseudo-class</h2>
+    <p>The :first-child pseudo-class matches a specified element that is the first child of another element.</p>
+    <h2>Match the first &lt;p&gt; element</h2>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p:first-child {
+  color: blue;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;This is some text.&lt;/p&gt;
+&lt;p&gt;This is some text.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;p&gt;This is some text.&lt;/p&gt;
+  &lt;p&gt;This is some text.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="first-child_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Match the first &lt;i&gt; element in all &lt;p&gt; elements</h2>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p i:first-child {
+  color: blue;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+&lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="p_element_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Match all &lt;i&gt; elements in all first child &lt;p&gt; elements</h2>
+    <p>In the following example, the selector matches all <i> elements in <p> elements that are the first child of another element:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p:first-child i {
+  color: blue;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+&lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+  &lt;p&gt;I am a &lt;i&gt;strong&lt;/i&gt; person. I am a &lt;i&gt;strong&lt;/i&gt; person.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="i_element_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS - The :lang Pseudo-class</h2>
+    <p>The :lang pseudo-class allows you to define special rules for different languages.</p>
+    <p>In the example below, :lang defines the quotation marks for &lt;q&gt; elements with lang="no":</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+q:lang(no) {
+  quotes: &quot;~&quot; &quot;~&quot;;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;Some text &lt;q lang=&quot;no&quot;&gt;A quote in a paragraph&lt;/q&gt; Some text.&lt;/p&gt;
+&lt;p&gt;In this example, :lang defines the quotation marks for q elements with lang=&quot;no&quot;:&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="lang_output.html">Out_Put</a></h3>
+    
+</body>
+</html>

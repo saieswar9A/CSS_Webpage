@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Backgrounds</title>
+    <style>
+      h5
+      {
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Backgrounds</h1>
+    <p>The CSS background properties are used to add background effects for elements.</p>
+    <ul>
+        <li>background-color</li>
+        <li>background-repeat</li>
+        <li>background-attachment</li>
+        <li>background-position</li>
+        <li>background (shorthand property)</li>
+    </ul>
+    <h2>CSS background-color</h2>
+    <p>The <code> background-color</code> property specifies the background color of an element.</p>
+    <p>
+        <span style="font-weight: bold;">Example</span>
+        <p>The background color of a page is set like this:</p>
+        <code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: lightblue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+
+&lt;p&gt;This page has a light blue background color!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </code>
+    </p>
+    <h3 style="text-align: center;"><a href="background-color_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Opacity / Transparency</h2>
+    <P>
+        The <code>opacity</code> property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:
+    </P>
+    <h3>Example</h3>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: green;
+}
+
+div.first {
+  opacity: 0.1;
+}
+
+div.second {
+  opacity: 0.3;
+}
+
+div.third {
+  opacity: 0.6;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Transparent Boxes&lt;/h1&gt;
+
+&lt;p&gt;When using the opacity property to add transparency to the background of an element, all<br> of its child elements become transparent as well. This can make the text inside a <br>fully transparent element hard to read:&lt;/p&gt;
+
+&lt;div class="first"&gt;
+  &lt;h1&gt;opacity 0.1&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="second"&gt;
+  &lt;h1&gt;opacity 0.3&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="third"&gt;
+  &lt;h1&gt;opacity 0.6&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;h1&gt;opacity 1 (default)&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3 style="text-align: center;"><a href="Opacity_+Transparency_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Transparency using RGBA</h2>
+    <p>
+        If you do not want to apply opacity to child elements, like in our example above, use RGBA color values. The following example sets the opacity for the background color and not the text:
+    </p>
+    <h3>Example</h3>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background: rgb(0, 128, 0);
+}
+
+div.first {
+  background: rgba(0, 128, 0, 0.1);
+}
+
+div.second {
+  background: rgba(0, 128, 0, 0.3);
+}
+
+div.third {
+  background: rgba(0, 128, 0, 0.6);
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Transparent Boxes 2&lt;/h1&gt;
+
+&lt;p&gt;Result with opacity:&lt;/p&gt;
+
+&lt;div style="opacity:0.1;"&gt;
+  &lt;h1&gt;10% opacity&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div style="opacity:0.3;"&gt;
+  &lt;h1&gt;30% opacity&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div style="opacity:0.6;"&gt;
+  &lt;h1&gt;60% opacity&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;h1&gt;opacity 1&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Result with rgba():&lt;/p&gt;
+
+&lt;div class="first"&gt;
+  &lt;h1&gt;10% opacity&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="second"&gt;
+  &lt;h1&gt;30% opacity&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="third"&gt;
+  &lt;h1&gt;60% opacity&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;h1&gt;default&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Notice how the text gets transparent as well as the background color when using the opacity property.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3 style="text-align: center;"><a href="transperancy_using_rgba_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h1>CSS Background Image</h1>
+    <h2>CSS background-image</h2>
+    <p>The <code>background-image</code> property specifies an image to use as the background of an element.</p>
+    <p>By default, the image is repeated so it covers the entire element.</p>
+    <h3>Example</h3>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-image: url("123.jpg");
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+
+&lt;p&gt;This page has an image as the background!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3 style="text-align: center;"><a href="Background_Image_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h1>CSS Background Image Repeat</h1>
+    <h2>CSS Background Image Repeat</h2>
+    <p>By default, the <code>background-image</code> property repeats an image both horizontally and vertically.</p>
+    <p>Some images should be repeated only horizontally or vertically, or they will look strange, like this:</p>
+    <h3>Example</h3>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-image: url("123.jpg");
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;Strange background image...&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3 style="text-align: center;"><a href="Image_Repeat_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS background-repeat: no-repeat</h2>
+    <p>Showing the background image only once is also specified by the background-repeat property:</p>
+    <h5>Example</h5>
+    <code>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-image: url("123.jpg");
+  background-repeat: no-repeat;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;W3Schools background image example.&lt;/p&gt;
+&lt;p&gt;The background image only shows once, but it is disturbing the reader!&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+      </pre>
+    </code>
+    <h3 style="text-align: center;"><a href="bg_no_repeatoutput.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS background-position</h2>
+    <p>The background-position property is used to specify the position of the background image.</p>
+    <h3>Example</h3>
+    <code>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-image: url("123.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 200px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;Here, the background image is only shown once. In addition it is positioned away from the text.&lt;/p&gt;
+&lt;p&gt;In this example we have also added a margin on the right side, so that the background image will <br>not disturb the text.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+      </pre>
+    </code>
+    <h3 style="text-align: center;"><a href="bg_position_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS background-attachment</h2>
+    <P>The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):</P>
+    <h3>Example-Fixed</h3>
+    <code>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-image: url("123.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 200px;
+  background-attachment: fixed;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;The background-attachment Property&lt;/h1&gt;
+
+&lt;p&gt;The background-attachment property specifies whether the background image should scroll or be fixed<br> (will not scroll with the rest of the page).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; If you do not see any scrollbars, try to resize the browser window.&lt;/p&gt;
+
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image is fixed. Try to scroll down the page.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+      </pre>
+    </code>
+
+    <h3 style="text-align: center;"><a href="attachment_fixed_output.html">Out_Put</a></h3>
+    <br>
+    <h3>Example-Scroll</h3>
+    <code>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-image: url("123.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 200px;
+  background-attachment: scroll;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;The background-attachment Property&lt;/h1&gt;
+
+&lt;p&gt;The background-attachment property specifies whether the background image should scroll or be <br>fixed (will not scroll with the rest of the page).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; If you do not see any scrollbars, try to resize the browser window.&lt;/p&gt;
+
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+&lt;p&gt;The background-image scrolls. Try to scroll down the page.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+      </pre>
+    </code>
+    <h3 style="text-align: center;"><a href="attachment_scroll_output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>CSS background - Shorthand property</h2>
+    <P>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</P>
+    <h5>Example</h5>
+    <code>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background: #ffffff url("123.jpg") no-repeat right top;
+  margin-right: 200px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;The background Property&lt;/h1&gt;
+
+&lt;p&gt;The background property is a shorthand property for specifying all<br> the background properties in one declaration.&lt;/p&gt;
+
+&lt;p&gt;Here, the background image is only shown once, and it is also positioned in the top-right corner.&lt;/p&gt;
+
+&lt;p&gt;We have also added a right margin, so that the text will not write over the background image.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+      </pre>
+    </code>
+    <h3 style="text-align: center;"><a href="bg_short_output.html">Out_Put</a></h3>
+
+</body>
+</html>
