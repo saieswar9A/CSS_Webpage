@@ -1,0 +1,15 @@
+body{
+    background: #b4d90dc8;
+}
+
+h1{
+    color: brown;
+    text-align: center;
+    margin-top: 10%;
+}
+p{
+    color: rgb(25, 25, 147);
+    text-align: right;
+    margin-top: 20%;
+    font-size: larger;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Margins</title>
+    <style>
+      h5
+      {
+        margin-left: 3%;
+        font-size: large;
+        font-weight: bold;
+      }
+      h3{
+        text-align: center;
+      }
+      
+    </style>
+</head>
+<body>
+    <h1>CSS Margins</h1>
+    <P>The CSS margin properties are used to create space around elements, outside of any defined borders.</P>
+    <h2>Margin - Individual Sides</h2>
+    <p>CSS has properties for specifying the margin for each side of an element:</p>
+    <ul>
+           <li>margin-top</li>
+           <li>margin-right</li>
+           <li>margin-bottom</li> 
+           <li>margin-left</li>
+    </ul>
+    <p>All the margin properties can have the following values:</p>
+    <ul>
+        <li>auto - the browser calculates the margin</li>
+        <li>length - specifies a margin in px, pt, cm, etc.</li>
+        <li>% - specifies a margin in % of the width of the containing element</li> 
+        <li>inherit - specifies that the margin should be inherited from the parent element</li>
+    </ul>
+    <P>Negative values are allowed.</P>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  border: 1px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: lightblue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Using individual margin properties&lt;/h2&gt;
+
+&lt;div&gt;This div element has a top margin of 100px, a right margin of 150px,
+ a bottom margin of 100px, and a left margin of 80px.&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="margin_individuals-output.html">Out_Put</a></h3>
+<hr><br>
+    <h2>Margin - Shorthand Property</h2>
+    <p>To shorten the code, it is possible to specify all the margin properties in one property.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  border: 1px solid black;
+  margin: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The margin shorthand property - 4 values&lt;/h2&gt;
+
+&lt;div&gt;This div element has a top margin of 25px, a right margin of 50px, a bottom,<br> margin of 75px, and a left margin of 100px.&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="margin_short_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Margin auto Value</h2>
+    <p>The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.</p>
+    <h5>Example</h5>
+    <code class="code">
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+width: 300px;
+margin: auto;
+border: 1px solid red;
+     }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+            
+&lt;h2&gt;Use of margin: auto&lt;/h2&gt;
+&lt;p&gt;You can set the margin property to auto to horizontally center the element within its container. 
+The element will then take up the specified width, and the remaining space will be split
+equally between the left and right margins:&lt;/p&gt;
+            
+&lt;div&gt;
+This div will be horizontally centered because it has margin: auto;
+&lt;/div&gt;
+            
+&lt;/body&gt;
+&lt;/html&gt;
+            
+        </pre>
+    </code>
+    <h3><a href="margin_auto_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Margin inherit Value</h2>
+    <p>This example lets the left margin of the &lt;p class="ex1"&gt; element be inherited from the parent element (&lt;div&gt;):</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+ div {
+ border: 1px solid red;
+ margin-left: 100px;
+     }
+            
+ p.ex1 {
+ margin-left: inherit;
+     }
+ &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+            
+ &lt;h2&gt;Use of the inherit value&lt;/h2&gt;
+ &lt;p&gt;Let the left margin be inherited from the parent element:&lt;/p&gt;
+            
+ &lt;div&gt;
+ &lt;p class="ex1"&gt;This paragraph has an inherited left margin (from the div element).&lt;/p&gt;
+ &lt;/div&gt;
+            
+ &lt;/body&gt;
+ &lt;/html&gt;
+            
+        </pre>
+    </code>
+    <h3><a href="inherit_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>Margin Collapse</h2>
+    <p>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.<br>
+
+        This does not happen on left and right margins! Only top and bottom margins!</p>
+
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {
+  margin: 0 0 50px 0;
+}
+
+h2 {
+  margin: 20px 0 0 0;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;In this example the h1 element has a bottom margin of 50px and the h2 
+element has a top margin of 20px. So, the vertical margin between h1 and h2 should
+ have been 70px (50px + 20px). However, due to margin collapse, the actual margin ends up being 50px.&lt;/p&gt;
+
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="margin_collaps_output.html">Out_Put</a></h3>
+
+</body>
+</html>

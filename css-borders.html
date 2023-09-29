@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Borders</title>
+    <style>
+      h5{
+        font-weight: bold;
+        margin-left: 3%;
+        font-size: large;
+      }
+      h3{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>CSS Borders</h1>
+    <P>The CSS border properties allow you to specify the style, width, and color of an element's border.</P>
+    <ul>
+        <Li>dotted - Defines a dotted border</Li>
+        <Li>dashed - Defines a dashed border</Li>
+        <Li>solid - Defines a solid border</Li>
+        <Li>double - Defines a double border</Li>
+        <Li>groove - Defines a 3D grooved border. The effect depends on the border-color value</Li>
+        <Li>ridge - Defines a 3D ridged border. The effect depends on the border-color value</Li>
+        <Li>inset - Defines a 3D inset border. The effect depends on the border-color value</Li>
+        <Li>outset - Defines a 3D outset border. The effect depends on the border-color value</Li>
+        <Li>none - Defines no border</Li>
+        <Li>hidden - Defines a hidden border</Li>
+    </ul>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The border-style Property&lt;/h2&gt;
+&lt;p&gt;This property specifies what kind of border to display:&lt;/p&gt;
+
+&lt;p class="dotted"&gt;A dotted border.&lt;/p&gt;
+&lt;p class="dashed"&gt;A dashed border.&lt;/p&gt;
+&lt;p class="solid"&gt;A solid border.&lt;/p&gt;
+&lt;p class="double"&gt;A double border.&lt;/p&gt;
+&lt;p class="groove"&gt;A groove border.&lt;/p&gt;
+&lt;p class="ridge"&gt;A ridge border.&lt;/p&gt;
+&lt;p class="inset"&gt;An inset border.&lt;/p&gt;
+&lt;p class="outset"&gt;An outset border.&lt;/p&gt;
+&lt;p class="none"&gt;No border.&lt;/p&gt;
+&lt;p class="hidden"&gt;A hidden border.&lt;/p&gt;
+&lt;p class="mix"&gt;A mixed border.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="borders_output.html">Out_Put</a></h3>
+ <hr><br>
+    <h2>CSS Border Width</h2>
+    <P>
+        The border-width property specifies the width of the four borders.
+    </P>
+    <P>
+        The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick:
+    </P>
+    <h5>Example-1</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+}
+
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+
+p.five {
+  border-style: double;
+  border-width: 15px;
+}
+
+p.six {
+  border-style: double;
+  border-width: thick;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The border-width Property&lt;/h2&gt;
+&lt;p&gt;This property specifies the width of the four borders:&lt;/p&gt;
+
+&lt;p class="one"&gt;Some text.&lt;/p&gt;
+&lt;p class="two"&gt;Some text.&lt;/p&gt;
+&lt;p class="three"&gt;Some text.&lt;/p&gt;
+&lt;p class="four"&gt;Some text.&lt;/p&gt;
+&lt;p class="five"&gt;Some text.&lt;/p&gt;
+&lt;p class="six"&gt;Some text.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The "border-width" property does not work if it is used alone. 
+Always specify the "border-style" property to set the borders first.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </code>
+    <h3><a href="brdr_e1_output.html">Out_Put</a></h3>
+  
+    <h5>Example-2</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.one {
+  border-style: solid;
+  border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+}
+
+p.two {
+  border-style: solid;
+  border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+}
+
+p.three {
+  border-style: solid;
+  border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom, and 35px left */
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The border-width Property&lt;/h2&gt;
+&lt;p&gt;The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border):&lt;/p&gt;
+
+&lt;p class="one"&gt;Some text.&lt;/p&gt;
+&lt;p class="two"&gt;Some text.&lt;/p&gt;
+&lt;p class="three"&gt;Some text.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+            
+        </pre>
+    </code>
+    <h3><a href="brdr_e2_output.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS Border - Individual Sides</h2>
+    <p>From the examples on the previous pages, you have seen that it is possible to specify a different border for each side.</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  text-align: center;
+}
+/* Four values */
+p.four {
+  border-style: dotted solid double dashed;
+}
+
+/* Three values */
+p.three {
+  border-style: dotted solid double;
+}
+
+/* Two values */
+p.two {
+  border-style: dotted solid;
+}
+
+/* One value */
+p.one {
+  border-style: dotted;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Individual Border Sides&lt;/h2&gt;
+&lt;p class="four"&gt;4 different border styles.&lt;/p&gt;
+&lt;p class="three"&gt;3 different border styles.&lt;/p&gt;
+&lt;p class="two"&gt;2 different border styles.&lt;/p&gt;
+&lt;p class="one"&gt;1 border style.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="individual_sides.html">Out_Put</a></h3>
+    <hr><br>
+    <h2>CSS Rounded Borders</h2>
+    <P>The border-radius property is used to add rounded borders to an element:</P>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p.normal {
+  border: 2px solid red;
+  padding: 5px;
+}
+
+p.round1 {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+p.round2 {
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+p.round3 {
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 5px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The border-radius Property&lt;/h2&gt;
+&lt;p&gt;This property is used to add rounded borders to an element:&lt;/p&gt;
+
+&lt;p class="normal"&gt;Normal border&lt;/p&gt;
+&lt;p class="round1"&gt;Round border&lt;/p&gt;
+&lt;p class="round2"&gt;Rounder border&lt;/p&gt;
+&lt;p class="round3"&gt;Roundest border&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="round_bdrr_output.html">Out_Put</a></h3>
+
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Layout - float and clear</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>The Float Property</h1>
+    <h2>The Float Property</h2>
+    <P>The float property is used for positioning and formatting content e.g. let an image float left to the text in a container.</P>
+    <p>The float property can have one of the following values:</p>
+    <ul>
+        <li>left - The element floats to the left of its container</li>
+        <li>right - The element floats to the right of its container</li>
+        <li>none - The element does not float (will be displayed just where it occurs in the text). This is the default.</li>
+        <li>inherit - The element inherits the float value of its parent</li>
+      </ul>
+      <h2>float: right;</h2>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  float: right;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Float Right&lt;/h2&gt;
+
+&lt;p&gt;In this example, the image will float to the right in the paragraph, and the text in the paragraph 
+will wrap around the image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, 
+nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a 
+lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. 
+Mauris quis diam velit.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="float_right_output.html">Out_Put</a></h3>
+<hr><br>
+      <h2>float: left</h2>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  float: left;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Float Left&lt;/h2&gt;
+
+&lt;p&gt;In this example, the image will float to the left in the paragraph, and the 
+text in the paragraph will wrap around the image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-right:15px;"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
+dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum 
+augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent 
+convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed 
+ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. 
+Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. 
+Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </code>
+      <h3><a href="float_left_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>No float</h2>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  float: none;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Float None&lt;/h2&gt;
+
+&lt;p&gt;In this example, the image will be displayed just where it occurs in the text (float: none;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, 
+nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, 
+facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
+congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
+imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="no_float_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>Float Next To Each Other</h2>
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  float: left;
+  padding: 15px; 
+}
+
+.div1 {
+  background: red;
+}
+
+.div2 {
+  background: yellow;
+}
+
+.div3 {
+  background: green;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Float Next To Each Other&lt;/h2&gt;
+
+&lt;p&gt;In this example, the three divs will float next to each other.&lt;/p&gt;
+
+&lt;div class="div1"&gt;Div 1&lt;/div&gt;
+&lt;div class="div2"&gt;Div 2&lt;/div&gt;
+&lt;div class="div3"&gt;Div 3&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="Each_other_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h1> clear and clearfix</h1>
+      <h2> clear and clearfix</h2>
+      <p>When we use the float property, and we want the next element below (not on right or left), 
+        we will have to use the clear property.</p>
+      <p>The clear property specifies what should happen with the element that is next to a floating element.</p>
+      <p>The clear property can have one of the following values:</p>
+      <ul>
+        <li>none - The element is not pushed below left or right floated elements. This is default</li>
+        <li>left - The element is pushed below left floated elements</li>
+        <li>right - The element is pushed below right floated elements</li>
+        <li>both - The element is pushed below both left and right floated elements</li>
+        <li>inherit - The element inherits the clear value from its parent</li>
+      </ul>
+
+      <h5>Example</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.div1 {
+  float: left;
+  padding: 10px;
+  border: 3px solid #73AD21;
+}
+
+.div2 {
+  padding: 10px;
+  border: 3px solid red;
+}
+
+.div3 {
+  float: left;
+  padding: 10px;  
+  border: 3px solid #73AD21;
+}
+
+.div4 {
+  padding: 10px;
+  border: 3px solid red;
+  clear: left;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Without clear&lt;/h2&gt;
+&lt;div class="div1"&gt;div1&lt;/div&gt;
+&lt;div class="div2"&gt;div2 - Notice that div2 is after div1 in the HTML code. However, since 
+div1 floats to the left, the text in div2 flows around div1.&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;h2&gt;With clear&lt;/h2&gt;
+&lt;div class="div3"&gt;div3&lt;/div&gt;
+&lt;div class="div4"&gt;div4 - Here, clear: left; moves div4 down below the floating div3. 
+The value "left" clears elements floated to the left. You can also clear "right" and "both".&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="clearfix_output.html">Out_Put</a></h3>
+      <hr><br>
+      <h2>The clearfix Hack</h2>
+      <p>
+        If a floated element is taller than the containing element, it will "overflow" outside of its container. We can then add a clearfix hack to solve this problem:
+      </p>
+      <h5>Example1</h5>
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.div1 {
+  float: left;
+  padding: 10px;
+  border: 3px solid #73AD21;
+}
+
+.div2 {
+  padding: 10px;
+  border: 3px solid red;
+}
+
+.div3 {
+  float: left;
+  padding: 10px;  
+  border: 3px solid #73AD21;
+}
+
+.div4 {
+  padding: 10px;
+  border: 3px solid red;
+  clear: left;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Without clear&lt;/h2&gt;
+&lt;div class="div1"&gt;div1&lt;/div&gt;
+&lt;div class="div2"&gt;div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats
+to the left, the text in div2 flows around div1.&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;h2&gt;With clear&lt;/h2&gt;
+&lt;div class="div3"&gt;div3&lt;/div&gt;
+&lt;div class="div4"&gt;div4 - Here, clear: left; moves div4 down below the floating div3. 
+The value "left" clears elements floated to the left. You can also clear "right" and "both".&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+      </code>
+      <h3><a href="clearfix_hack_e1_output.html">Out_Put</a></h3>
+      <br>
+      <h5>Example-2</h5>
+      <p>The overflow: auto clearfix works well as long as you are able to keep control of your margins and padding (else you might see scrollbars). The new, modern clearfix hack however, is safer to use, and the following code is used for most webpages:</p>
+
+      <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+
+.img2 {
+  float: right;
+}
+
+.clearfix::after {
+  content: &quot;&quot;;
+  clear: both;
+  display: table;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Without Clearfix&lt;/h2&gt;
+
+&lt;p&gt;This image is floated to the right. It is also taller than the element containing it, 
+so it overflows outside of its container:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;img class=&quot;img1&quot; src=&quot;pineapple.jpg&quot; alt=&quot;Pineapple&quot; width=&quot;170&quot; height=&quot;170&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+&lt;/div&gt;
+
+&lt;h2 style=&quot;clear:right&quot;&gt;With New Modern Clearfix&lt;/h2&gt;
+&lt;p&gt;Add the clearfix hack to the containing element, to fix this problem:&lt;/p&gt;
+
+&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;img class=&quot;img2&quot; src=&quot;pineapple.jpg&quot; alt=&quot;Pineapple&quot; width=&quot;170&quot; height=&quot;170&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+      </code>
+      <h3><a href="clearfix_hack_e2_output.html">Out_Put</a></h3>
+      
+</body>
+</html>

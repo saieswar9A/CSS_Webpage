@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_html.css">
+    <title>CSS Links</title>
+    <style>
+      h5{
+        font-size: large;
+        font-weight: bold;
+        margin-left: 3%;
+      }
+      h3{
+        text-align:center;
+      }
+    </style>
+</head>
+<body>
+    <h2>Styling Links</h2>
+    <p>Links can be styled with any CSS property (e.g. color, font-family, background, etc.).</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+a {
+  color: hotpink;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Style a link with a color&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a href="default.asp" target="_blank"&gt;This is a link&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="styling_links.html">Out_put</a></h3>
+<hr><br>
+    <ul>
+        <li>a:link - a normal, unvisited link</li>
+        <li>a:visited - a link the user has visited</li>
+        <li>a:hover - a link when the user mouses over it</li>
+        <li>a:active - a link the moment it is clicked</li>
+    </ul>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Styling a link depending on state&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a href="default.asp" target="_blank"&gt;This is a link&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:hover MUST come after a:link and a:visited in the CSS 
+definition in order to be effective.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:active MUST come after a:hover in the CSS definition in
+ order to be effective.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+    <h3><a href="links_satate-output.html">Out_put</a></h3>
+    <hr><br>
+    <h2>Text Decoration</h2>
+    <p>The text-decoration property is mostly used to remove underlines from links:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Styling a link with text-decoration property&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a href="default.asp" target="_blank"&gt;This is a link&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:hover MUST come after a:link and a:visited in the CSS 
+definition in order to be effective.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:active MUST come after a:hover in the CSS definition in 
+order to be effective.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="link_decoration_output.html">Out_put</a></h3>
+    <hr><br>
+    <h2>Background Color</h2>
+    <p>The background-color property can be used to specify a background color for links:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+a:link {
+  background-color: yellow;
+}
+
+a:visited {
+  background-color: cyan;
+}
+
+a:hover {
+  background-color: lightgreen;
+}
+
+a:active {
+  background-color: hotpink;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Styling a link with background-color property&lt;/h2&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a href="default.asp" target="_blank"&gt;This is a link&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:hover MUST come after a:link and a:visited in the CSS
+ definition in order to be effective.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; a:active MUST come after a:hover in the CSS definition in 
+order to be effective.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="link_bg_color_output.html">Out_put</a></h3>
+    <hr><br>
+    <h2>Link Buttons</h2>
+    <p>This example demonstrates a more advanced example where we combine several CSS properties to display links as boxes/buttons:</p>
+    <h5>Example</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Link Button&lt;/h2&gt;
+
+&lt;p&gt;A link styled as a button:&lt;/p&gt;
+&lt;a href="default.asp" target="_blank"&gt;This is a link&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="link_buttons_output.html">Out_put</a></h3>
+    <hr><br>
+    <h1>More Examples</h1>
+    <h5>Example-1</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+a.one:link {color:#ff0000;}
+a.one:visited {color:#0000ff;}
+a.one:hover {color:#ffcc00;}
+
+a.two:link {color:#ff0000;}
+a.two:visited {color:#0000ff;}
+a.two:hover {font-size:150%;}
+
+a.three:link {color:#ff0000;}
+a.three:visited {color:#0000ff;}
+a.three:hover {background:#66ff66;}
+
+a.four:link {color:#ff0000;}
+a.four:visited {color:#0000ff;}
+a.four:hover {font-family:monospace;}
+
+a.five:link {color:#ff0000;text-decoration:none;}
+a.five:visited {color:#0000ff;text-decoration:none;}
+a.five:hover {text-decoration:underline;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Styling Links&lt;/h2&gt;
+
+&lt;p&gt;Mouse over the links and watch them change layout:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;a class="one" href="default.asp" target="_blank"&gt;This link changes color&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="two" href="default.asp" target="_blank"&gt;This link changes font-size&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="three" href="default.asp" target="_blank"&gt;This link changes background-color&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="four" href="default.asp" target="_blank"&gt;This link changes font-family&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;a class="five" href="default.asp" target="_blank"&gt;This link changes text-decoration&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="more_examples.output.html">Out_put</a></h3>
+    
+    <h5>Example-2</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Link Button&lt;/h2&gt;
+
+&lt;a href="default.asp" target="_blank"&gt;This is a link&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="more_example2.output.html">Out_put</a></h3>
+  
+    <h5>Example-3</h5>
+    <code>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;The cursor Property&lt;/h2&gt;
+
+&lt;p&gt;Mouse over the words to change the cursor.&lt;/p&gt;
+&lt;span style="cursor:auto"&gt;auto&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:crosshair"&gt;crosshair&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:default"&gt;default&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:e-resize"&gt;e-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:help"&gt;help&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:move"&gt;move&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:n-resize"&gt;n-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:ne-resize"&gt;ne-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:nw-resize"&gt;nw-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:pointer"&gt;pointer&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:progress"&gt;progress&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:s-resize"&gt;s-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:se-resize"&gt;se-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:sw-resize"&gt;sw-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:text"&gt;text&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:w-resize"&gt;w-resize&lt;/span&gt;&lt;br&gt;
+&lt;span style="cursor:wait"&gt;wait&lt;/span&gt;&lt;br&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </pre>
+    </code>
+
+    <h3><a href="more_example3.output.html">Out_put</a></h3>
+</body>
+</html>
